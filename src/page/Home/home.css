@@ -1,0 +1,7 @@
+.contenedorapp{
+  max-width: 1000px;
+  display: grid;
+  gap:1rem;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}

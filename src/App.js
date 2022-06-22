@@ -1,18 +1,10 @@
-import "./App.css";
-import { useEffect } from "react";
-import { fetchData } from "./utils/fetchData";
+import Mainrouter from './components/MainRouter';
 
 function App() {
-  useEffect(() => {
-    const fetchAPI = async () => {
-      const data = await fetchData(
-        "http://gateway.marvel.com/v1/public/characters?"
-      );
-      console.log(data);
-    };
-    fetchAPI();
-  }, []);
-  return <div className="App">hola</div>;
+  return (
+    <Mainrouter />
+  );
 }
 
 export default App;
+

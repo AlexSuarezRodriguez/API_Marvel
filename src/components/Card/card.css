@@ -1,0 +1,12 @@
+.container-card{
+  width: 300px;
+  height: 180px;
+  display: grid;
+  grid-Template-Columns: 4fr 5fr;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+.container-card_img{
+  overflow: scroll;
+  height: 180px;
+}
