@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect } from "react";
+import { fetchData } from "./utils/fetchData";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  useEffect(() => {
+    const fetchAPI = async () => {
+      const data = await fetchData(
+        "http://gateway.marvel.com/v1/public/characters?"
+      );
+      console.log(data);
+    };
+    fetchAPI();
+  }, []);
+  return <div className="App">hola</div>;
 }
 
 export default App;
