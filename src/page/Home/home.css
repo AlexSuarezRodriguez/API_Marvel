@@ -1,7 +1,10 @@
 .contenedorapp{
   max-width: 1000px;
+  place-content: center;
   display: grid;
   gap:1rem;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  position: relative;
+  margin-left:  auto ;
+  margin-right: auto;
 }

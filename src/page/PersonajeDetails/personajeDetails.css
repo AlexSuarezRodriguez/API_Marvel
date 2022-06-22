@@ -1,0 +1,10 @@
+.containerDetails{
+  max-width: 992px;
+display: grid;
+place-content: center;
+}
+.wrapperDetails{
+  width: 100%;
+  height: 100px;
+  background: green;
+}

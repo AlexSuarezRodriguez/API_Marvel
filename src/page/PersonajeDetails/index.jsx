@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import {fetchData} from '../../utils/fetchData'
 import { useParams } from 'react-router-dom';
+import './personajeDetails.css'
 
 function PersonajeDetails() {
   const [personaje, setPersonaje] = useState([]);
@@ -17,7 +18,12 @@ function PersonajeDetails() {
     fetchAPI();
   }, []);
   return (
-    <div>index</div>
+    <div className='containerDetails'>
+
+    <div className='wrapperDetails'>
+    </div>
+
+    </div>
   )
 }
 
