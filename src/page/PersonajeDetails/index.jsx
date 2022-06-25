@@ -15,7 +15,7 @@ function PersonajeDetails() {
 
   const fetchAPI = async () => {
     const { data } = await fetchData(
-      `http://gateway.marvel.com/v1/public/characters/${params.id}?`
+      `https://gateway.marvel.com/v1/public/characters/${params.id}?`
     );
     // const comics= await
     setPersonaje(data.results);
@@ -23,7 +23,7 @@ function PersonajeDetails() {
 
   const fetchComics = async () => {
     const { data } = await fetchData(
-      `http://gateway.marvel.com/v1/public/characters/${params.id}/comics?`
+      `https://gateway.marvel.com/v1/public/characters/${params.id}/comics?`
     );
     // const comics= await
     setComics(data.results);
@@ -32,7 +32,7 @@ function PersonajeDetails() {
   const fetchDataComics = async () => {
     setPage((pre) => pre + 1);
     const { data } = await fetchData(
-      `http://gateway.marvel.com/v1/public/characters/${params.id}/comics?`,
+      `https://gateway.marvel.com/v1/public/characters/${params.id}/comics?`,
       page
     );
     setComics([...comics, ...data.results]);

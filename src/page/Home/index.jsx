@@ -12,7 +12,7 @@ function Home() {
   const fetchDataPersonajes = async () => {
     setPage((pre) => pre + 1);
     const { data } = await fetchData(
-      "http://gateway.marvel.com/v1/public/characters?",
+      "https://gateway.marvel.com/v1/public/characters?",
       page
     );
     setPersonajes([...personajes, ...data.results]);
@@ -20,7 +20,7 @@ function Home() {
 
   const fetchAPI = async () => {
     const { data } = await fetchData(
-      "http://gateway.marvel.com/v1/public/characters?",
+      "https://gateway.marvel.com/v1/public/characters?",
       0
     );
     setPersonajes(data.results);
