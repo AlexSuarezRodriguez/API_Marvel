@@ -2,6 +2,7 @@ import "./home.css";
 import { useEffect, useState } from "react";
 import { fetchData } from "../../utils/fetchData";
 import InfiniteScroll from "react-infinite-scroll-component";
+import Navbar from "../../components/Navbar";
 import Card from "../../components/Card";
 
 function Home() {
@@ -32,30 +33,33 @@ function Home() {
     fetchAPI();
   }, []);
   return (
-    <div>
-      <InfiniteScroll
-        className="contenedorapp"
-        dataLength={personajes.length} //This is important field to render the next data
-        next={fetchDataPersonajes}
-        hasMore={hashMore}
-        loader={<h4>Loading...</h4>}
-        endMessage={
-          <p style={{ textAlign: "center" }}>
-            <b>Yay! You have seen it all</b>
-          </p>
-        }
-      >
-        {personajes.map((element) => (
-          <Card
-            key={element.id}
-            image={element.thumbnail}
-            name={element.name}
-            description={element.description}
-            id={element.id}
-          />
-        ))}
-      </InfiniteScroll>
-    </div>
+    <>
+      <Navbar />
+      <div>
+        <InfiniteScroll
+          className="contenedorapp"
+          dataLength={personajes.length} //This is important field to render the next data
+          next={fetchDataPersonajes}
+          hasMore={hashMore}
+          loader={<h4>Loading...</h4>}
+          endMessage={
+            <p style={{ textAlign: "center" }}>
+              <b>Yay! You have seen it all</b>
+            </p>
+          }
+        >
+          {personajes.map((element) => (
+            <Card
+              key={element.id}
+              image={element.thumbnail}
+              name={element.name}
+              description={element.description}
+              id={element.id}
+            />
+          ))}
+        </InfiniteScroll>
+      </div>
+    </>
   );
 }
 

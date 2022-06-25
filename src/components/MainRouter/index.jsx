@@ -3,12 +3,9 @@ import { HOME_ROUTE, PERSONAJE_DETAILS, HOME_PERSONAJES } from "../../Constants/
 import Home from "../../page/Home";
 import PersonajeDetails from "../../page/PersonajeDetails";
 import Login from "../../page/Login"
-import Navbar from "../Navbar";
-
 function Mainrouter() {
   return (
     <BrowserRouter>
-        <Navbar/>
       <Routes>
         <Route path={HOME_ROUTE} element={<Login />} />
         <Route path={HOME_PERSONAJES} element={<Home />} />
