@@ -2,6 +2,10 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
+export function loginComponent(valor) {
+  return valor;
+}
+
 function Login() {
   const navigate = useNavigate();
   return (
@@ -36,9 +40,17 @@ function Login() {
                 }
                 return errors;
               }}
-              onSubmit={({email}) => {
-                console.log('esto son los datos despues de enviar',email)
-                navigate("/home");
+              onSubmit={(valores) => {
+                if (valores.email === "login@byfi.com") {
+                  const login = {
+                    email: valores.email,
+                    name: "byfi",
+                    lastName: "telecomunicaciones",
+                  };
+                  localStorage.setItem("token", JSON.stringify(login));
+                  loginComponent(true);
+                  navigate("/home");
+                }
               }}
             >
               {({ errors }) => (
