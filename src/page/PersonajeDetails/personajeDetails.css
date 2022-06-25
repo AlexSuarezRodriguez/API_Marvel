@@ -7,13 +7,17 @@
 }
 .containerDetails > img{
   object-fit: fill;
+  /* position: fixed; */
   height: 100%;
   width: 100%;
 }
 .containerDetails_description{
-  margin: 0 auto;
+  margin: 20px auto;
   display: grid;
-  overflow-y: scroll;
+  overflow-y:auto ;
   gap:10px;
-  padding-top:15px ;
+  padding: 0 25px;
 }
+/* .descriptionScroll{
+  overflow-y:auto ;
+} */

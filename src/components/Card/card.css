@@ -20,3 +20,9 @@ z-index: 1;
   justify-content: space-around;
   height: 100%;
 }
+.btn-header-users {
+  padding: 5px 20px;
+  background-color: #171c27;
+  border-radius: 5px;
+  color: aliceblue;
+}
