@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-
+import image from './marvel-character-logo.jpg'
 export function loginComponent(valor) {
   return valor;
 }
@@ -54,7 +54,8 @@ function Login() {
               }}
             >
               {({ errors }) => (
-                <Form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <Form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"> 
+                  <img src={image} alt='marvel comics'/>
                   <div className="mb-4">
                     <label
                       htmlFor="email"
