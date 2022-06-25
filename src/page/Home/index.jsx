@@ -16,6 +16,9 @@ function Home() {
       page
     );
     setPersonajes([...personajes, ...data.results]);
+    if (data.results.length === 0 || data.results.length < 20) {
+      setHashMore(false);
+    }
   };
 
   const fetchAPI = async () => {

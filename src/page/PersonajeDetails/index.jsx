@@ -36,6 +36,9 @@ function PersonajeDetails() {
       page
     );
     setComics([...comics, ...data.results]);
+    if (data.results.length === 0 || data.results.length < 20) {
+      setHashMore(false);
+    }
   };
   useEffect(() => {
     fetchAPI();
@@ -43,7 +46,7 @@ function PersonajeDetails() {
   }, []);
   console.log(comics);
   return (
-    <div style={{display:'flex', justifyContent:'center'}}>
+    <div style={{ display: "flex", justifyContent: "center" }}>
       {personaje.length > 0 && (
         <div className="containerDetails">
           <img
@@ -51,7 +54,9 @@ function PersonajeDetails() {
             alt="qw"
           />
           <div className="containerDetails_description" id="scroll">
-            <h1 style={{margin: '0 auto', fontSize:'25px'}}><strong>{personaje[0].name}</strong></h1>
+            <h1 style={{ margin: "0 auto", fontSize: "25px" }}>
+              <strong>{personaje[0].name}</strong>
+            </h1>
             {personaje[0].description ? (
               <p>{personaje[0].description}</p>
             ) : (

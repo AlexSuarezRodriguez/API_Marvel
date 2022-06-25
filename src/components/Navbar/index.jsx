@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { loginComponent } from "../../page/Login";
 import "./navbar.css";
 
 function Navbar() {
@@ -15,7 +14,6 @@ function Navbar() {
       setlogin([JSON.parse(localStorage.getItem("token"))]);
     }
   }, []);
-  console.log("log", login);
   return (
     <div className="navbar">
       <strong className="nav-logo">MARVEL</strong>
