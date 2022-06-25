@@ -14,6 +14,7 @@ function Navbar() {
       setlogin([JSON.parse(localStorage.getItem("token"))]);
     }
   }, []);
+  console.log("ingresar: login@byfi.com");
   return (
     <div className="navbar">
       <strong className="nav-logo">MARVEL</strong>
@@ -25,7 +26,11 @@ function Navbar() {
             <button
               type="button"
               onClick={handleLogout}
-              style={{ background: "red", padding: "0px 10px",borderRadius:"4px" }}
+              style={{
+                background: "red",
+                padding: "0px 10px",
+                borderRadius: "4px",
+              }}
             >
               Cerrar Sesion
             </button>

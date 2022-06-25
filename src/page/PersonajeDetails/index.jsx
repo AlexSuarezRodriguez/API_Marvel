@@ -44,7 +44,6 @@ function PersonajeDetails() {
     fetchAPI();
     fetchComics();
   }, []);
-  console.log(comics);
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       {personaje.length > 0 && (
