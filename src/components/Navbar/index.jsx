@@ -14,7 +14,6 @@ function Navbar() {
       setlogin([JSON.parse(localStorage.getItem("token"))]);
     }
   }, []);
-  console.log("ingresar: login@byfi.com");
   return (
     <div className="navbar">
       <strong className="nav-logo">MARVEL</strong>

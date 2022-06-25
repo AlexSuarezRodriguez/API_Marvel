@@ -1,13 +1,14 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import image from './marvel-character-logo.jpg'
+import image from "./marvel-character-logo.jpg";
 export function loginComponent(valor) {
   return valor;
 }
 
 function Login() {
   const navigate = useNavigate();
+  console.log("ingresar con: login@byfi.com ");
   return (
     <div className="bg-[#171c27] h-screen text-black flex">
       <div className="w-full max-w-xl m-auto">
@@ -54,8 +55,8 @@ function Login() {
               }}
             >
               {({ errors }) => (
-                <Form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"> 
-                  <img src={image} alt='marvel comics'/>
+                <Form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                  <img src={image} alt="marvel comics" />
                   <div className="mb-4">
                     <label
                       htmlFor="email"
